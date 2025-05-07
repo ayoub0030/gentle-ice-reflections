@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
 import WaterAnimation from './WaterAnimation';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -26,9 +27,11 @@ const HeroSection = () => {
           <Button size="lg" className="text-lg px-8 py-6 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl">
             Start Talking
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-water-300 text-water-700 hover:bg-water-50 transition-all duration-300 rounded-full">
-            Learn More
-          </Button>
+          <Link to="/about">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-water-300 text-water-700 hover:bg-water-50 transition-all duration-300 rounded-full">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

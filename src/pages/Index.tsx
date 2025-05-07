@@ -6,6 +6,7 @@ import Testimonials from '../components/Testimonials';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import { Droplets } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -17,10 +18,10 @@ const Index = () => {
             <span className="text-xl font-bold text-foreground">WaterTalk</span>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-foreground hover:text-water-600 transition-colors">Home</a>
-            <a href="#" className="text-foreground hover:text-water-600 transition-colors">About</a>
-            <a href="#" className="text-foreground hover:text-water-600 transition-colors">How It Works</a>
-            <a href="#" className="text-foreground hover:text-water-600 transition-colors">Testimonials</a>
+            <Link to="/" className="text-water-600 font-medium transition-colors">Home</Link>
+            <Link to="/about" className="text-foreground hover:text-water-600 transition-colors">About</Link>
+            <a href="#how-it-works" className="text-foreground hover:text-water-600 transition-colors">How It Works</a>
+            <a href="#testimonials" className="text-foreground hover:text-water-600 transition-colors">Testimonials</a>
           </nav>
           <button className="text-sm font-medium px-4 py-2 bg-water-100 text-water-700 rounded-full hover:bg-water-200 transition-colors">
             Sign In

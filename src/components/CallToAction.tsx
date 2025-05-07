@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '../components/ui/button';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   return (
@@ -19,6 +20,12 @@ const CallToAction = () => {
         <Button size="lg" className="text-lg px-10 py-6 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl">
           Start Talking Now
         </Button>
+        
+        <div className="mt-6">
+          <Link to="/about" className="text-water-600 hover:text-water-700 font-medium">
+            Learn more about how WaterTalk works →
+          </Link>
+        </div>
       </div>
     </section>
   );
