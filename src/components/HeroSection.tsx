@@ -24,9 +24,11 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8 py-6 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl hover:translate-y-[-2px]">
-            Start Talking
-          </Button>
+          <Link to="/chat">
+            <Button size="lg" className="text-lg px-8 py-6 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl hover:translate-y-[-2px]">
+              Start Talking
+            </Button>
+          </Link>
           <Link to="/about">
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-water-300 text-water-700 hover:bg-water-50 transition-all duration-300 rounded-full hover:translate-y-[-2px]">
               Learn More

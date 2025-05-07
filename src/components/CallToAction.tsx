@@ -23,9 +23,11 @@ const CallToAction = () => {
           Take a moment for yourself. Start a conversation that could change how you feel today.
         </p>
         
-        <Button size="lg" className="text-lg px-10 py-7 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:translate-y-[-2px]">
-          Start Talking Now
-        </Button>
+        <Link to="/chat">
+          <Button size="lg" className="text-lg px-10 py-7 bg-water-600 hover:bg-water-700 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl transform hover:translate-y-[-2px]">
+            Start Talking Now
+          </Button>
+        </Link>
         
         <div className="mt-8">
           <Link to="/about" className="text-water-600 hover:text-water-700 font-medium inline-flex items-center group">
