@@ -27,23 +27,30 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 bg-water-50">
+    <section id="faq" className="py-24 px-4 sm:px-6 bg-gradient-to-b from-water-50 to-background">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+          <span className="inline-block px-4 py-1 bg-water-100 text-water-700 rounded-full text-sm font-medium mb-4">Questions & Answers</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">Frequently <span className="text-water-600">Asked</span></h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about WaterTalk and how it can help you.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-lg font-medium">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-lg border border-water-100">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-water-100 py-2">
+                <AccordionTrigger className="text-left text-lg font-medium text-foreground hover:text-water-600">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-2 pb-4">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );

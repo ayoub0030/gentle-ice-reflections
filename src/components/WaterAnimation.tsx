@@ -4,10 +4,10 @@ import React from 'react';
 const WaterAnimation = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute -inset-[10%] water-gradient opacity-40"></div>
+      <div className="absolute -inset-[10%] bg-gradient-to-b from-background/80 via-water-100/30 to-water-200/20 opacity-70"></div>
       
       {/* Animated wave elements */}
-      <div className="absolute bottom-0 left-0 w-full h-64 opacity-10">
+      <div className="absolute bottom-0 left-0 w-full h-64 opacity-20">
         <svg 
           className="w-full h-full"
           viewBox="0 0 1440 320" 
@@ -31,7 +31,7 @@ const WaterAnimation = () => {
         </svg>
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-64 opacity-20 animate-float-delay-1">
+      <div className="absolute bottom-0 left-0 w-full h-64 opacity-15 animate-float-delay-1">
         <svg 
           className="w-full h-full"
           viewBox="0 0 1440 320" 
@@ -54,6 +54,11 @@ const WaterAnimation = () => {
           </path>
         </svg>
       </div>
+      
+      {/* Add floating elements */}
+      <div className="absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-water-300/20 animate-float blur-2xl"></div>
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-water-400/10 animate-float-delay-1 blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-20 h-20 rounded-full bg-water-200/30 animate-float-delay-2 blur-xl"></div>
     </div>
   );
 };

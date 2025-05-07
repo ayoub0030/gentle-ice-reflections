@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Droplet, MessageCircle, Heart } from 'lucide-react';
+import { MessageCircle, Droplets, Heart } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
@@ -10,7 +10,7 @@ const HowItWorks = () => {
       description: "Share your thoughts, feelings, or struggles without judgment. Speak freely in a safe, confidential space."
     },
     {
-      icon: <Droplet className="w-12 h-12 text-water-500" />,
+      icon: <Droplets className="w-12 h-12 text-water-500" />,
       title: "Find Clarity",
       description: "Through gentle conversation and prompts, discover insights and perspectives that bring clarity to your emotions."
     },
@@ -22,30 +22,31 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-gradient-to-b from-background to-water-50">
+    <section id="how-it-works" className="py-24 px-4 sm:px-6 bg-gradient-to-b from-background to-water-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How It Works</h2>
+          <span className="inline-block px-4 py-1 bg-water-100 text-water-700 rounded-full text-sm font-medium mb-4">Our Process</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">How It <span className="text-water-600">Works</span></h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A simple process designed to help you process emotions and find peace, 
             inspired by modern psychology and mindfulness practices.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-water-100 hover:border-water-300 transform hover:translate-y-[-5px]"
             >
-              <div className="mb-6 flex justify-center">
-                <div className="relative">
+              <div className="mb-8 flex justify-center">
+                <div className="relative p-4 bg-water-50 rounded-2xl">
                   {step.icon}
-                  <span className="absolute inset-0 rounded-full bg-water-200 animate-ripple -z-10"></span>
+                  <span className="absolute inset-0 rounded-2xl bg-water-200/50 animate-ripple -z-10"></span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground text-center">{step.title}</h3>
-              <p className="text-muted-foreground text-center">{step.description}</p>
+              <h3 className="text-2xl font-semibold mb-4 text-foreground text-center">{step.title}</h3>
+              <p className="text-muted-foreground text-center leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>
