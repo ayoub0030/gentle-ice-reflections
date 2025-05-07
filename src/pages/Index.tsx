@@ -5,6 +5,7 @@ import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import FAQ from '../components/FAQ';
 import { Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ const Index = () => {
             <Link to="/about" className="text-foreground hover:text-water-600 transition-colors">About</Link>
             <a href="#how-it-works" className="text-foreground hover:text-water-600 transition-colors">How It Works</a>
             <a href="#testimonials" className="text-foreground hover:text-water-600 transition-colors">Testimonials</a>
+            <a href="#faq" className="text-foreground hover:text-water-600 transition-colors">FAQ</a>
           </nav>
           <button className="text-sm font-medium px-4 py-2 bg-water-100 text-water-700 rounded-full hover:bg-water-200 transition-colors">
             Sign In
@@ -33,6 +35,7 @@ const Index = () => {
         <HeroSection />
         <HowItWorks />
         <Testimonials />
+        <FAQ />
         <CallToAction />
       </main>
 

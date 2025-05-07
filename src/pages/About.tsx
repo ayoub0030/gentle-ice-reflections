@@ -13,7 +13,7 @@ const About = () => {
       description: "Share your thoughts, feelings, or struggles without judgment. Speak freely in a safe, confidential space where your emotions are acknowledged and validated."
     },
     {
-      icon: <Droplet className="w-16 h-16 text-water-500" />,
+      icon: <Droplets className="w-16 h-16 text-water-500" />,
       title: "Find Clarity",
       description: "Through gentle conversation and thoughtful prompts, discover insights and perspectives that bring clarity to your emotions and help you understand yourself better."
     },
